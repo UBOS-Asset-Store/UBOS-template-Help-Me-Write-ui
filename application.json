@@ -1,0 +1,48 @@
+{
+    "_id": "65fd723a43ec617a8d6f8b47",
+    "name": "help-write-ui",
+    "slug": "help-write-ui",
+    "organizationId": "Org",
+    "isPublic": false,
+    "isMenu": false,
+    "isShowPlatformTag": true,
+    "createdAt": "2024-03-22T11:57:46.686Z",
+    "updatedAt": "2024-03-22T11:57:46.686Z",
+    "deleted": false,
+    "pages": [
+        {
+            "_id": "home",
+            "isDefault": true
+        }
+    ],
+    "policies": [
+        {
+            "permission": "makePublic:applications",
+            "groups": [],
+            "users": []
+        },
+        {
+            "permission": "read:applications",
+            "groups": [],
+            "users": []
+        },
+        {
+            "permission": "publish:applications",
+            "groups": [],
+            "users": []
+        },
+        {
+            "permission": "manage:applications",
+            "groups": [],
+            "users": []
+        }
+    ],
+    "gitApplicationMetadata": {
+        "browserSupportedRemoteUrl": "https://github.com/UBOS-Asset-Store/UBOS-template-Help-Me-Write-ui",
+        "defaultApplicationId": "help-write-ui",
+        "defaultBranchName": "main",
+        "isRepoPrivate": true,
+        "remoteUrl": "git@github.com:UBOS-Asset-Store/UBOS-template-Help-Me-Write-ui.git",
+        "repoName": "UBOS-template-Help-Me-Write-ui"
+    }
+}
