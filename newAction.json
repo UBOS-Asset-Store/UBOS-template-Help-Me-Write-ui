@@ -10,7 +10,7 @@
             "datasource": {
                 "name": "DEFAULT_REST_DATASOURCE",
                 "datasourceConfiguration": {
-                    "url": "{{main.env.nr}}/sendMail"
+                    "url": "{{main.env.nodeURL}}/sendMail"
                 },
                 "invalids": [],
                 "isValid": true,
@@ -39,28 +39,29 @@
                         "value": true
                     }
                 ],
-                "body": "{\n\t\"mail\": {{JSON.stringify(mail.text)}},\n\t\"prompt\": \"{{prompt_input.text}}\"\n}"
+                "body": "{\n\t\"mail\": {{JSON.stringify(mail.text)}},\n\t\"prompt\": {{JSON.stringify(prompt_input.text)}},\n\t\"key\": {{JSON.stringify(API_KEY.text)}}\n}"
             },
             "dynamicBindingPathList": [
                 {
-                    "key": "datasourceUrl"
+                    "key": "body"
                 },
                 {
-                    "key": "body"
+                    "key": "datasourceUrl"
                 }
             ],
             "isValid": true,
             "invalids": [],
             "jsonPathKeys": [
-                "main.env.nr",
+                "main.env.nodeURL",
                 "JSON.stringify(mail.text)",
-                "prompt_input.text"
+                "JSON.stringify(prompt_input.text)",
+                "JSON.stringify(API_KEY.text)"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-05-12T11:24:56.268Z",
-        "updatedAt": "2023-08-30T09:31:30.594Z",
+        "updatedAt": "2024-03-22T15:09:15.965Z",
         "deleted": false,
         "policies": [
             {
@@ -91,7 +92,7 @@
             "datasource": {
                 "name": "DEFAULT_REST_DATASOURCE",
                 "datasourceConfiguration": {
-                    "url": "{{main.env.nr}}/writeMail"
+                    "url": "{{main.env.nodeURL}}/writeMail"
                 },
                 "invalids": [],
                 "isValid": true,
@@ -120,7 +121,7 @@
                         "value": true
                     }
                 ],
-                "body": "{\n\t\"prompt\": {{JSON.stringify(mailCreate.text)}}\n}"
+                "body": "{\n\t\"prompt\": {{JSON.stringify(mailCreate.text)}},\n\t\"key\": {{JSON.stringify(API_KEY.text)}},\n\t\"key\": {{JSON.stringify(API_KEY.text)}}\n}"
             },
             "dynamicBindingPathList": [
                 {
@@ -133,14 +134,15 @@
             "isValid": true,
             "invalids": [],
             "jsonPathKeys": [
-                "main.env.nr",
-                "JSON.stringify(mailCreate.text)"
+                "main.env.nodeURL",
+                "JSON.stringify(mailCreate.text)",
+                "JSON.stringify(API_KEY.text)"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-05-12T11:43:43.964Z",
-        "updatedAt": "2023-08-30T09:31:28.051Z",
+        "updatedAt": "2024-03-22T15:09:12.627Z",
         "deleted": false,
         "policies": [
             {
@@ -171,7 +173,7 @@
             "datasource": {
                 "name": "DEFAULT_REST_DATASOURCE",
                 "datasourceConfiguration": {
-                    "url": "{{main.env.nr}}/changeMail"
+                    "url": "{{main.env.nodeURL}}/changeMail"
                 },
                 "invalids": [],
                 "isValid": true,
@@ -200,7 +202,7 @@
                         "value": true
                     }
                 ],
-                "body": "{\n\t\"type\": \"{{main.store.type}}\",\n\t\"mail\": {{JSON.stringify(requestText.text)}}\n}"
+                "body": "{\n\t\"type\": \"{{main.store.type}}\",\n\t\"mail\": {{JSON.stringify(requestText.text)}},\n\t\"key\": {{JSON.stringify(API_KEY.text)}}\n}"
             },
             "dynamicBindingPathList": [
                 {
@@ -213,15 +215,17 @@
             "isValid": true,
             "invalids": [],
             "jsonPathKeys": [
-                "main.env.nr",
+                "main.env.n",
                 "main.store.type",
-                "JSON.stringify(requestText.text)"
+                "JSON.stringify(requestText.text)",
+                "JSON.stringify(API_KEY.text)",
+                "main.env.nodeURL"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-05-12T11:45:27.099Z",
-        "updatedAt": "2023-08-30T09:31:35.103Z",
+        "updatedAt": "2024-03-22T15:07:28.595Z",
         "deleted": false,
         "policies": [
             {
@@ -252,7 +256,7 @@
             "datasource": {
                 "name": "DEFAULT_REST_DATASOURCE",
                 "datasourceConfiguration": {
-                    "url": "{{main.env.nr}}/changeMail"
+                    "url": "{{main.env.nodeURL}}/changeMail"
                 },
                 "invalids": [],
                 "isValid": true,
@@ -281,7 +285,7 @@
                         "value": true
                     }
                 ],
-                "body": "{\n\t\"type\": \"{{main.store.type}}\",\n\t\"mail\": {{JSON.stringify(createdEmail.text)}}\n}"
+                "body": "{\n\t\"type\": \"{{main.store.type}}\",\n\t\"mail\": {{JSON.stringify(createdEmail.text)}},\n\t\"key\": {{JSON.stringify(API_KEY.text)}}\n}"
             },
             "dynamicBindingPathList": [
                 {
@@ -294,15 +298,17 @@
             "isValid": true,
             "invalids": [],
             "jsonPathKeys": [
-                "main.env.nr",
+                "main.env.n",
                 "main.store.type",
-                "JSON.stringify(createdEmail.text)"
+                "JSON.stringify(createdEmail.text)",
+                "JSON.stringify(API_KEY.text)",
+                "main.env.nodeURL"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-05-12T12:28:04.495Z",
-        "updatedAt": "2023-08-30T09:31:32.591Z",
+        "updatedAt": "2024-03-22T15:07:32.870Z",
         "deleted": false,
         "policies": [
             {

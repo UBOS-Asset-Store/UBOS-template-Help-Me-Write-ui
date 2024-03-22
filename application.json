@@ -38,7 +38,7 @@
         }
     ],
     "global_setting": {
-        "css": "${env.get(\"nodeUrl\")}/css"
+        "css": "${env.get(\"nodeURL\")}/css"
     },
     "gitApplicationMetadata": {
         "browserSupportedRemoteUrl": "https://github.com/UBOS-Asset-Store/UBOS-template-Help-Me-Write-ui",
