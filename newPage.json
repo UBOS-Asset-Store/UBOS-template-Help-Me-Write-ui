@@ -17,7 +17,7 @@
                         "detachFromLayout": true,
                         "widgetId": "0",
                         "topRow": 0,
-                        "bottomRow": 1600,
+                        "bottomRow": 1630,
                         "containerStyle": "none",
                         "snapRows": 125,
                         "parentRowSpace": 1,
@@ -90,7 +90,7 @@
                                                 "leftColumn": 0,
                                                 "rightColumn": 64,
                                                 "topRow": 30,
-                                                "bottomRow": 156,
+                                                "bottomRow": 157,
                                                 "parentId": "3l6pu7xf6x",
                                                 "children": [
                                                     {
@@ -109,14 +109,14 @@
                                                         "tabName": "Answer to email",
                                                         "children": [
                                                             {
-                                                                "isVisible": "{{changeMail.responseMeta.statusCode === '200'}}",
+                                                                "isVisible": true,
                                                                 "animateLoading": true,
-                                                                "text": "Perfect! Copy answer",
+                                                                "text": "Elaborate",
                                                                 "buttonColor": "#00DFC0",
                                                                 "buttonVariant": "PRIMARY",
                                                                 "placement": "CENTER",
-                                                                "widgetName": "Button4Copy1",
-                                                                "isDisabled": false,
+                                                                "widgetName": "Button2",
+                                                                "isDisabled": "{{sendMail.responseMeta.statusCode !== '200'}}",
                                                                 "isDefaultClickDisabled": true,
                                                                 "recaptchaType": "V3",
                                                                 "version": 1,
@@ -126,19 +126,175 @@
                                                                 "displayName": "Button",
                                                                 "key": "xhjcs8ywyz",
                                                                 "iconSVG": "/static/media/icon.cca02633.svg",
-                                                                "widgetId": "qqumebx8z0",
+                                                                "widgetId": "kne8ka80i6",
+                                                                "renderMode": "CANVAS",
+                                                                "isLoading": false,
+                                                                "parentColumnSpace": 19,
+                                                                "parentRowSpace": 10,
+                                                                "leftColumn": 0,
+                                                                "rightColumn": 12,
+                                                                "topRow": 80,
+                                                                "bottomRow": 85,
+                                                                "parentId": "bw66pcb0ju",
+                                                                "dynamicBindingPathList": [
+                                                                    {
+                                                                        "key": "isDisabled"
+                                                                    }
+                                                                ],
+                                                                "dynamicTriggerPathList": [
+                                                                    {
+                                                                        "key": "onClick"
+                                                                    }
+                                                                ],
+                                                                "iconName": "maximize",
+                                                                "iconAlign": "left",
+                                                                "onClick": "{{(storeValue(\"type\", 'elaborate'),changeMail.run())}}",
+                                                                "dynamicPropertyPathList": [
+                                                                    {
+                                                                        "key": "onClick"
+                                                                    },
+                                                                    {
+                                                                        "key": "isDisabled"
+                                                                    }
+                                                                ],
+                                                                "borderRadius": "ROUNDED",
+                                                                "boxShadow": "VARIANT2"
+                                                            },
+                                                            {
+                                                                "isVisible": true,
+                                                                "animateLoading": true,
+                                                                "text": "Shorten",
+                                                                "buttonColor": "#00DFC0",
+                                                                "buttonVariant": "PRIMARY",
+                                                                "placement": "CENTER",
+                                                                "widgetName": "Button3",
+                                                                "isDisabled": "{{sendMail.responseMeta.statusCode !== '200'}}",
+                                                                "isDefaultClickDisabled": true,
+                                                                "recaptchaType": "V3",
+                                                                "version": 1,
+                                                                "classStyle": "btn",
+                                                                "type": "BUTTON_WIDGET",
+                                                                "hideCard": false,
+                                                                "displayName": "Button",
+                                                                "key": "xhjcs8ywyz",
+                                                                "iconSVG": "/static/media/icon.cca02633.svg",
+                                                                "widgetId": "abchyb89j8",
+                                                                "renderMode": "CANVAS",
+                                                                "isLoading": false,
+                                                                "parentColumnSpace": 19,
+                                                                "parentRowSpace": 10,
+                                                                "leftColumn": 13,
+                                                                "rightColumn": 25,
+                                                                "topRow": 80,
+                                                                "bottomRow": 85,
+                                                                "parentId": "bw66pcb0ju",
+                                                                "dynamicBindingPathList": [
+                                                                    {
+                                                                        "key": "isDisabled"
+                                                                    }
+                                                                ],
+                                                                "dynamicTriggerPathList": [
+                                                                    {
+                                                                        "key": "onClick"
+                                                                    }
+                                                                ],
+                                                                "iconName": "minimize",
+                                                                "iconAlign": "left",
+                                                                "onClick": "{{(storeValue(\"type\", 'shorter'),changeMail.run())}}",
+                                                                "dynamicPropertyPathList": [
+                                                                    {
+                                                                        "key": "onClick"
+                                                                    },
+                                                                    {
+                                                                        "key": "isDisabled"
+                                                                    }
+                                                                ],
+                                                                "boxShadow": "VARIANT2",
+                                                                "borderRadius": "ROUNDED"
+                                                            },
+                                                            {
+                                                                "isVisible": true,
+                                                                "animateLoading": true,
+                                                                "text": "Formalize",
+                                                                "buttonColor": "#00DFC0",
+                                                                "buttonVariant": "PRIMARY",
+                                                                "placement": "CENTER",
+                                                                "widgetName": "Button1",
+                                                                "isDisabled": "{{sendMail.responseMeta.statusCode !== '200'}}",
+                                                                "isDefaultClickDisabled": true,
+                                                                "recaptchaType": "V3",
+                                                                "version": 1,
+                                                                "classStyle": "btn",
+                                                                "type": "BUTTON_WIDGET",
+                                                                "hideCard": false,
+                                                                "displayName": "Button",
+                                                                "key": "xhjcs8ywyz",
+                                                                "iconSVG": "/static/media/icon.cca02633.svg",
+                                                                "widgetId": "f9hy94x6g4",
+                                                                "renderMode": "CANVAS",
+                                                                "isLoading": false,
+                                                                "parentColumnSpace": 19,
+                                                                "parentRowSpace": 10,
+                                                                "leftColumn": 26,
+                                                                "rightColumn": 38,
+                                                                "topRow": 80,
+                                                                "bottomRow": 85,
+                                                                "parentId": "bw66pcb0ju",
+                                                                "dynamicBindingPathList": [
+                                                                    {
+                                                                        "key": "isDisabled"
+                                                                    }
+                                                                ],
+                                                                "dynamicTriggerPathList": [
+                                                                    {
+                                                                        "key": "onClick"
+                                                                    }
+                                                                ],
+                                                                "iconName": "briefcase",
+                                                                "iconAlign": "left",
+                                                                "onClick": "{{(storeValue(\"type\", 'formalize'),changeMail.run())}}",
+                                                                "dynamicPropertyPathList": [
+                                                                    {
+                                                                        "key": "onClick"
+                                                                    },
+                                                                    {
+                                                                        "key": "isDisabled"
+                                                                    }
+                                                                ],
+                                                                "boxShadow": "VARIANT2",
+                                                                "borderRadius": "ROUNDED"
+                                                            },
+                                                            {
+                                                                "isVisible": false,
+                                                                "animateLoading": true,
+                                                                "text": "Perfect! Copy answer",
+                                                                "buttonColor": "#00DFC0",
+                                                                "buttonVariant": "PRIMARY",
+                                                                "placement": "CENTER",
+                                                                "widgetName": "Button4",
+                                                                "isDisabled": "{{sendMail.responseMeta.statusCode !== '200'}}",
+                                                                "isDefaultClickDisabled": true,
+                                                                "recaptchaType": "V3",
+                                                                "version": 1,
+                                                                "classStyle": "btn",
+                                                                "type": "BUTTON_WIDGET",
+                                                                "hideCard": false,
+                                                                "displayName": "Button",
+                                                                "key": "xhjcs8ywyz",
+                                                                "iconSVG": "/static/media/icon.cca02633.svg",
+                                                                "widgetId": "fbdl0glm6v",
                                                                 "renderMode": "CANVAS",
                                                                 "isLoading": false,
                                                                 "parentColumnSpace": 19,
                                                                 "parentRowSpace": 10,
                                                                 "leftColumn": 47,
                                                                 "rightColumn": 64,
-                                                                "topRow": 115,
-                                                                "bottomRow": 120,
+                                                                "topRow": 80,
+                                                                "bottomRow": 85,
                                                                 "parentId": "bw66pcb0ju",
                                                                 "dynamicBindingPathList": [
                                                                     {
-                                                                        "key": "isVisible"
+                                                                        "key": "isDisabled"
                                                                     }
                                                                 ],
                                                                 "dynamicTriggerPathList": [
@@ -152,10 +308,101 @@
                                                                 "boxShadow": "VARIANT2",
                                                                 "dynamicPropertyPathList": [
                                                                     {
-                                                                        "key": "isVisible"
+                                                                        "key": "onClick"
                                                                     },
                                                                     {
+                                                                        "key": "isDisabled"
+                                                                    }
+                                                                ],
+                                                                "onClick": "{{(copyToClipboard(requestText.text), showAlert('Copied!', 'success') )}}"
+                                                            },
+                                                            {
+                                                                "isVisible": true,
+                                                                "text": "{{changeMail.data.choices[0].message.content}}",
+                                                                "fontSize": "HEADING3",
+                                                                "fontStyle": "",
+                                                                "textAlign": "LEFT",
+                                                                "textColor": "#231F20",
+                                                                "truncateButtonColor": "#FFC13D",
+                                                                "widgetName": "Text3",
+                                                                "shouldTruncate": false,
+                                                                "overflow": "SCROLL",
+                                                                "version": 1,
+                                                                "animateLoading": true,
+                                                                "type": "TEXT_WIDGET",
+                                                                "hideCard": false,
+                                                                "displayName": "Text",
+                                                                "key": "mm2k8m5694",
+                                                                "iconSVG": "/static/media/icon.97c59b52.svg",
+                                                                "widgetId": "w5gkawx8a3",
+                                                                "renderMode": "CANVAS",
+                                                                "isLoading": false,
+                                                                "parentColumnSpace": 15.40625,
+                                                                "parentRowSpace": 10,
+                                                                "leftColumn": 0,
+                                                                "rightColumn": 64,
+                                                                "topRow": 86,
+                                                                "bottomRow": 114,
+                                                                "parentId": "bw66pcb0ju",
+                                                                "dynamicBindingPathList": [
+                                                                    {
+                                                                        "key": "text"
+                                                                    }
+                                                                ],
+                                                                "dynamicTriggerPathList": [],
+                                                                "borderColor": "#F6F7F8",
+                                                                "borderWidth": "2",
+                                                                "backgroundColor": "#F6F7F850",
+                                                                "dynamicPropertyPathList": []
+                                                            },
+                                                            {
+                                                                "isVisible": true,
+                                                                "animateLoading": true,
+                                                                "text": "Perfect! Copy answer",
+                                                                "buttonColor": "#00DFC0",
+                                                                "buttonVariant": "PRIMARY",
+                                                                "placement": "CENTER",
+                                                                "widgetName": "Button4Copy1",
+                                                                "isDisabled": "{{sendMail.responseMeta.statusCode !== '200'}}",
+                                                                "isDefaultClickDisabled": true,
+                                                                "recaptchaType": "V3",
+                                                                "version": 1,
+                                                                "classStyle": "btn",
+                                                                "type": "BUTTON_WIDGET",
+                                                                "hideCard": false,
+                                                                "displayName": "Button",
+                                                                "key": "xhjcs8ywyz",
+                                                                "iconSVG": "/static/media/icon.cca02633.svg",
+                                                                "widgetId": "chfzbbawum",
+                                                                "renderMode": "CANVAS",
+                                                                "isLoading": false,
+                                                                "parentColumnSpace": 19,
+                                                                "parentRowSpace": 10,
+                                                                "leftColumn": 47,
+                                                                "rightColumn": 64,
+                                                                "topRow": 115,
+                                                                "bottomRow": 120,
+                                                                "parentId": "bw66pcb0ju",
+                                                                "dynamicBindingPathList": [
+                                                                    {
+                                                                        "key": "isDisabled"
+                                                                    }
+                                                                ],
+                                                                "dynamicTriggerPathList": [
+                                                                    {
                                                                         "key": "onClick"
+                                                                    }
+                                                                ],
+                                                                "iconName": "duplicate",
+                                                                "iconAlign": "left",
+                                                                "borderRadius": "ROUNDED",
+                                                                "boxShadow": "VARIANT2",
+                                                                "dynamicPropertyPathList": [
+                                                                    {
+                                                                        "key": "onClick"
+                                                                    },
+                                                                    {
+                                                                        "key": "isDisabled"
                                                                     }
                                                                 ],
                                                                 "onClick": "{{(copyToClipboard(Text3.text), showAlert('Copied!', 'success') )}}"
@@ -197,260 +444,6 @@
                                                                 "backgroundColor": "#F6F7F850",
                                                                 "borderColor": "#F6F7F8",
                                                                 "borderWidth": "2"
-                                                            },
-                                                            {
-                                                                "isVisible": "{{sendMail.responseMeta.statusCode === '200'}}",
-                                                                "animateLoading": true,
-                                                                "text": "Elaborate",
-                                                                "buttonColor": "#00DFC0",
-                                                                "buttonVariant": "PRIMARY",
-                                                                "placement": "CENTER",
-                                                                "widgetName": "Button2",
-                                                                "isDisabled": false,
-                                                                "isDefaultClickDisabled": true,
-                                                                "recaptchaType": "V3",
-                                                                "version": 1,
-                                                                "classStyle": "btn",
-                                                                "type": "BUTTON_WIDGET",
-                                                                "hideCard": false,
-                                                                "displayName": "Button",
-                                                                "key": "xhjcs8ywyz",
-                                                                "iconSVG": "/static/media/icon.cca02633.svg",
-                                                                "widgetId": "85g5gmg05d",
-                                                                "renderMode": "CANVAS",
-                                                                "isLoading": false,
-                                                                "parentColumnSpace": 19,
-                                                                "parentRowSpace": 10,
-                                                                "leftColumn": 0,
-                                                                "rightColumn": 12,
-                                                                "topRow": 80,
-                                                                "bottomRow": 85,
-                                                                "parentId": "bw66pcb0ju",
-                                                                "dynamicBindingPathList": [
-                                                                    {
-                                                                        "key": "isVisible"
-                                                                    }
-                                                                ],
-                                                                "dynamicTriggerPathList": [
-                                                                    {
-                                                                        "key": "onClick"
-                                                                    }
-                                                                ],
-                                                                "iconName": "maximize",
-                                                                "iconAlign": "left",
-                                                                "onClick": "{{(storeValue(\"type\", 'elaborate'),changeMail.run())}}",
-                                                                "dynamicPropertyPathList": [
-                                                                    {
-                                                                        "key": "onClick"
-                                                                    },
-                                                                    {
-                                                                        "key": "isVisible"
-                                                                    }
-                                                                ],
-                                                                "borderRadius": "ROUNDED",
-                                                                "boxShadow": "VARIANT2"
-                                                            },
-                                                            {
-                                                                "isVisible": "{{sendMail.responseMeta.statusCode === '200'}}",
-                                                                "animateLoading": true,
-                                                                "text": "Shorten",
-                                                                "buttonColor": "#00DFC0",
-                                                                "buttonVariant": "PRIMARY",
-                                                                "placement": "CENTER",
-                                                                "widgetName": "Button3",
-                                                                "isDisabled": false,
-                                                                "isDefaultClickDisabled": true,
-                                                                "recaptchaType": "V3",
-                                                                "version": 1,
-                                                                "classStyle": "btn",
-                                                                "type": "BUTTON_WIDGET",
-                                                                "hideCard": false,
-                                                                "displayName": "Button",
-                                                                "key": "xhjcs8ywyz",
-                                                                "iconSVG": "/static/media/icon.cca02633.svg",
-                                                                "widgetId": "a2mbv66b1n",
-                                                                "renderMode": "CANVAS",
-                                                                "isLoading": false,
-                                                                "parentColumnSpace": 19,
-                                                                "parentRowSpace": 10,
-                                                                "leftColumn": 13,
-                                                                "rightColumn": 25,
-                                                                "topRow": 80,
-                                                                "bottomRow": 85,
-                                                                "parentId": "bw66pcb0ju",
-                                                                "dynamicBindingPathList": [
-                                                                    {
-                                                                        "key": "isVisible"
-                                                                    }
-                                                                ],
-                                                                "dynamicTriggerPathList": [
-                                                                    {
-                                                                        "key": "onClick"
-                                                                    }
-                                                                ],
-                                                                "iconName": "minimize",
-                                                                "iconAlign": "left",
-                                                                "onClick": "{{(storeValue(\"type\", 'shorter'),changeMail.run())}}",
-                                                                "dynamicPropertyPathList": [
-                                                                    {
-                                                                        "key": "onClick"
-                                                                    },
-                                                                    {
-                                                                        "key": "isVisible"
-                                                                    }
-                                                                ],
-                                                                "boxShadow": "VARIANT2",
-                                                                "borderRadius": "ROUNDED"
-                                                            },
-                                                            {
-                                                                "isVisible": "{{sendMail.responseMeta.statusCode === '200'}}",
-                                                                "animateLoading": true,
-                                                                "text": "Formalize",
-                                                                "buttonColor": "#00DFC0",
-                                                                "buttonVariant": "PRIMARY",
-                                                                "placement": "CENTER",
-                                                                "widgetName": "Button1",
-                                                                "isDisabled": false,
-                                                                "isDefaultClickDisabled": true,
-                                                                "recaptchaType": "V3",
-                                                                "version": 1,
-                                                                "classStyle": "btn",
-                                                                "type": "BUTTON_WIDGET",
-                                                                "hideCard": false,
-                                                                "displayName": "Button",
-                                                                "key": "xhjcs8ywyz",
-                                                                "iconSVG": "/static/media/icon.cca02633.svg",
-                                                                "widgetId": "z8p98jhr48",
-                                                                "renderMode": "CANVAS",
-                                                                "isLoading": false,
-                                                                "parentColumnSpace": 19,
-                                                                "parentRowSpace": 10,
-                                                                "leftColumn": 26,
-                                                                "rightColumn": 38,
-                                                                "topRow": 80,
-                                                                "bottomRow": 85,
-                                                                "parentId": "bw66pcb0ju",
-                                                                "dynamicBindingPathList": [
-                                                                    {
-                                                                        "key": "isVisible"
-                                                                    }
-                                                                ],
-                                                                "dynamicTriggerPathList": [
-                                                                    {
-                                                                        "key": "onClick"
-                                                                    }
-                                                                ],
-                                                                "iconName": "briefcase",
-                                                                "iconAlign": "left",
-                                                                "onClick": "{{(storeValue(\"type\", 'formalize'),changeMail.run())}}",
-                                                                "dynamicPropertyPathList": [
-                                                                    {
-                                                                        "key": "onClick"
-                                                                    },
-                                                                    {
-                                                                        "key": "isVisible"
-                                                                    }
-                                                                ],
-                                                                "boxShadow": "VARIANT2",
-                                                                "borderRadius": "ROUNDED"
-                                                            },
-                                                            {
-                                                                "isVisible": "{{sendMail.responseMeta.statusCode === '200'}}",
-                                                                "animateLoading": true,
-                                                                "text": "Perfect! Copy answer",
-                                                                "buttonColor": "#00DFC0",
-                                                                "buttonVariant": "PRIMARY",
-                                                                "placement": "CENTER",
-                                                                "widgetName": "Button4",
-                                                                "isDisabled": false,
-                                                                "isDefaultClickDisabled": true,
-                                                                "recaptchaType": "V3",
-                                                                "version": 1,
-                                                                "classStyle": "btn",
-                                                                "type": "BUTTON_WIDGET",
-                                                                "hideCard": false,
-                                                                "displayName": "Button",
-                                                                "key": "xhjcs8ywyz",
-                                                                "iconSVG": "/static/media/icon.cca02633.svg",
-                                                                "widgetId": "58f7ceug8q",
-                                                                "renderMode": "CANVAS",
-                                                                "isLoading": false,
-                                                                "parentColumnSpace": 19,
-                                                                "parentRowSpace": 10,
-                                                                "leftColumn": 47,
-                                                                "rightColumn": 64,
-                                                                "topRow": 80,
-                                                                "bottomRow": 85,
-                                                                "parentId": "bw66pcb0ju",
-                                                                "dynamicBindingPathList": [
-                                                                    {
-                                                                        "key": "isVisible"
-                                                                    }
-                                                                ],
-                                                                "dynamicTriggerPathList": [
-                                                                    {
-                                                                        "key": "onClick"
-                                                                    }
-                                                                ],
-                                                                "iconName": "duplicate",
-                                                                "iconAlign": "left",
-                                                                "borderRadius": "ROUNDED",
-                                                                "boxShadow": "VARIANT2",
-                                                                "dynamicPropertyPathList": [
-                                                                    {
-                                                                        "key": "isVisible"
-                                                                    },
-                                                                    {
-                                                                        "key": "onClick"
-                                                                    }
-                                                                ],
-                                                                "onClick": "{{(copyToClipboard(requestText.text), showAlert('Copied!', 'success') )}}"
-                                                            },
-                                                            {
-                                                                "isVisible": "{{sendMail.responseMeta.statusCode === '200'}}",
-                                                                "text": "{{changeMail.data.choices[0].message.content}}",
-                                                                "fontSize": "HEADING3",
-                                                                "fontStyle": "",
-                                                                "textAlign": "LEFT",
-                                                                "textColor": "#231F20",
-                                                                "truncateButtonColor": "#FFC13D",
-                                                                "widgetName": "Text3",
-                                                                "shouldTruncate": false,
-                                                                "overflow": "SCROLL",
-                                                                "version": 1,
-                                                                "animateLoading": true,
-                                                                "type": "TEXT_WIDGET",
-                                                                "hideCard": false,
-                                                                "displayName": "Text",
-                                                                "key": "mm2k8m5694",
-                                                                "iconSVG": "/static/media/icon.97c59b52.svg",
-                                                                "widgetId": "uyl5v85e8b",
-                                                                "renderMode": "CANVAS",
-                                                                "isLoading": false,
-                                                                "parentColumnSpace": 15.40625,
-                                                                "parentRowSpace": 10,
-                                                                "leftColumn": 0,
-                                                                "rightColumn": 64,
-                                                                "topRow": 86,
-                                                                "bottomRow": 114,
-                                                                "parentId": "bw66pcb0ju",
-                                                                "dynamicBindingPathList": [
-                                                                    {
-                                                                        "key": "text"
-                                                                    },
-                                                                    {
-                                                                        "key": "isVisible"
-                                                                    }
-                                                                ],
-                                                                "dynamicTriggerPathList": [],
-                                                                "borderColor": "#F6F7F8",
-                                                                "borderWidth": "2",
-                                                                "backgroundColor": "#F6F7F850",
-                                                                "dynamicPropertyPathList": [
-                                                                    {
-                                                                        "key": "isVisible"
-                                                                    }
-                                                                ]
                                                             },
                                                             {
                                                                 "isVisible": true,
@@ -661,14 +654,14 @@
                                                         "tabName": "Create mail",
                                                         "children": [
                                                             {
-                                                                "isVisible": "{{changeMail2.responseMeta.statusCode==='200'}}",
+                                                                "isVisible": true,
                                                                 "animateLoading": true,
                                                                 "text": "Perfect! Copy answer",
                                                                 "buttonColor": "#00DFC0",
                                                                 "buttonVariant": "PRIMARY",
                                                                 "placement": "CENTER",
                                                                 "widgetName": "Button4CopyCopy",
-                                                                "isDisabled": false,
+                                                                "isDisabled": "{{writeMail.responseMeta.statusCode !=='200'}}",
                                                                 "isDefaultClickDisabled": true,
                                                                 "recaptchaType": "V3",
                                                                 "version": 1,
@@ -690,7 +683,7 @@
                                                                 "parentId": "gfvnd526mm",
                                                                 "dynamicBindingPathList": [
                                                                     {
-                                                                        "key": "isVisible"
+                                                                        "key": "isDisabled"
                                                                     }
                                                                 ],
                                                                 "dynamicTriggerPathList": [
@@ -706,21 +699,21 @@
                                                                         "key": "onClick"
                                                                     },
                                                                     {
-                                                                        "key": "isVisible"
+                                                                        "key": "isDisabled"
                                                                     }
                                                                 ],
                                                                 "boxShadow": "VARIANT2",
                                                                 "borderRadius": "ROUNDED"
                                                             },
                                                             {
-                                                                "isVisible": "{{writeMail.responseMeta.statusCode==='200'}}",
+                                                                "isVisible": true,
                                                                 "animateLoading": true,
                                                                 "text": "Elaborate",
                                                                 "buttonColor": "#00DFC0",
                                                                 "buttonVariant": "PRIMARY",
                                                                 "placement": "CENTER",
                                                                 "widgetName": "Button2Copy",
-                                                                "isDisabled": false,
+                                                                "isDisabled": "{{writeMail.responseMeta.statusCode !=='200'}}",
                                                                 "isDefaultClickDisabled": true,
                                                                 "recaptchaType": "V3",
                                                                 "version": 1,
@@ -742,7 +735,7 @@
                                                                 "parentId": "gfvnd526mm",
                                                                 "dynamicBindingPathList": [
                                                                     {
-                                                                        "key": "isVisible"
+                                                                        "key": "isDisabled"
                                                                     }
                                                                 ],
                                                                 "dynamicTriggerPathList": [
@@ -758,21 +751,21 @@
                                                                         "key": "onClick"
                                                                     },
                                                                     {
-                                                                        "key": "isVisible"
+                                                                        "key": "isDisabled"
                                                                     }
                                                                 ],
                                                                 "borderRadius": "ROUNDED",
                                                                 "boxShadow": "VARIANT2"
                                                             },
                                                             {
-                                                                "isVisible": "{{writeMail.responseMeta.statusCode==='200'}}",
+                                                                "isVisible": true,
                                                                 "animateLoading": true,
                                                                 "text": "Shorten",
                                                                 "buttonColor": "#00DFC0",
                                                                 "buttonVariant": "PRIMARY",
                                                                 "placement": "CENTER",
                                                                 "widgetName": "Button3Copy",
-                                                                "isDisabled": false,
+                                                                "isDisabled": "{{writeMail.responseMeta.statusCode !=='200'}}",
                                                                 "isDefaultClickDisabled": true,
                                                                 "recaptchaType": "V3",
                                                                 "version": 1,
@@ -794,7 +787,7 @@
                                                                 "parentId": "gfvnd526mm",
                                                                 "dynamicBindingPathList": [
                                                                     {
-                                                                        "key": "isVisible"
+                                                                        "key": "isDisabled"
                                                                     }
                                                                 ],
                                                                 "dynamicTriggerPathList": [
@@ -810,21 +803,21 @@
                                                                         "key": "onClick"
                                                                     },
                                                                     {
-                                                                        "key": "isVisible"
+                                                                        "key": "isDisabled"
                                                                     }
                                                                 ],
                                                                 "borderRadius": "ROUNDED",
                                                                 "boxShadow": "VARIANT2"
                                                             },
                                                             {
-                                                                "isVisible": "{{writeMail.responseMeta.statusCode==='200'}}",
+                                                                "isVisible": true,
                                                                 "animateLoading": true,
                                                                 "text": "Formalize",
                                                                 "buttonColor": "#00DFC0",
                                                                 "buttonVariant": "PRIMARY",
                                                                 "placement": "CENTER",
                                                                 "widgetName": "Button1Copy",
-                                                                "isDisabled": false,
+                                                                "isDisabled": "{{writeMail.responseMeta.statusCode !=='200'}}",
                                                                 "isDefaultClickDisabled": true,
                                                                 "recaptchaType": "V3",
                                                                 "version": 1,
@@ -846,7 +839,7 @@
                                                                 "parentId": "gfvnd526mm",
                                                                 "dynamicBindingPathList": [
                                                                     {
-                                                                        "key": "isVisible"
+                                                                        "key": "isDisabled"
                                                                     }
                                                                 ],
                                                                 "dynamicTriggerPathList": [
@@ -862,21 +855,21 @@
                                                                         "key": "onClick"
                                                                     },
                                                                     {
-                                                                        "key": "isVisible"
+                                                                        "key": "isDisabled"
                                                                     }
                                                                 ],
                                                                 "borderRadius": "ROUNDED",
                                                                 "boxShadow": "VARIANT2"
                                                             },
                                                             {
-                                                                "isVisible": "{{writeMail.responseMeta.statusCode==='200'}}",
+                                                                "isVisible": true,
                                                                 "animateLoading": true,
                                                                 "text": "Perfect! Copy answer",
                                                                 "buttonColor": "#00DFC0",
                                                                 "buttonVariant": "PRIMARY",
                                                                 "placement": "CENTER",
                                                                 "widgetName": "Button4Copy",
-                                                                "isDisabled": false,
+                                                                "isDisabled": "{{writeMail.responseMeta.statusCode !=='200'}}",
                                                                 "isDefaultClickDisabled": true,
                                                                 "recaptchaType": "V3",
                                                                 "version": 1,
@@ -898,7 +891,7 @@
                                                                 "parentId": "gfvnd526mm",
                                                                 "dynamicBindingPathList": [
                                                                     {
-                                                                        "key": "isVisible"
+                                                                        "key": "isDisabled"
                                                                     }
                                                                 ],
                                                                 "dynamicTriggerPathList": [
@@ -914,14 +907,14 @@
                                                                         "key": "onClick"
                                                                     },
                                                                     {
-                                                                        "key": "isVisible"
+                                                                        "key": "isDisabled"
                                                                     }
                                                                 ],
                                                                 "borderRadius": "ROUNDED",
                                                                 "boxShadow": "VARIANT2"
                                                             },
                                                             {
-                                                                "isVisible": "{{writeMail.responseMeta.statusCode==='200'}}",
+                                                                "isVisible": true,
                                                                 "text": "{{changeMail2.data.choices[0].message.content}}",
                                                                 "fontSize": "HEADING2",
                                                                 "fontStyle": "",
@@ -951,20 +944,13 @@
                                                                 "dynamicBindingPathList": [
                                                                     {
                                                                         "key": "text"
-                                                                    },
-                                                                    {
-                                                                        "key": "isVisible"
                                                                     }
                                                                 ],
                                                                 "dynamicTriggerPathList": [],
                                                                 "backgroundColor": "#F6F7F850",
                                                                 "borderColor": "#F6F7F8",
                                                                 "borderWidth": "2",
-                                                                "dynamicPropertyPathList": [
-                                                                    {
-                                                                        "key": "isVisible"
-                                                                    }
-                                                                ]
+                                                                "dynamicPropertyPathList": []
                                                             },
                                                             {
                                                                 "isVisible": true,
@@ -1239,7 +1225,7 @@
                                         "leftColumn": 0,
                                         "rightColumn": 377.25,
                                         "topRow": 0,
-                                        "bottomRow": 1580,
+                                        "bottomRow": 1590,
                                         "parentId": "5ta5g130r6"
                                     }
                                 ],
@@ -1259,7 +1245,7 @@
                                 "leftColumn": 0,
                                 "rightColumn": 64,
                                 "topRow": 0,
-                                "bottomRow": 158,
+                                "bottomRow": 161,
                                 "parentId": "0",
                                 "dynamicBindingPathList": [],
                                 "dynamicTriggerPathList": [],
@@ -1274,13 +1260,13 @@
                         "Canvas1",
                         "Tabs1",
                         "Canvas2",
-                        "Button4Copy1",
-                        "requestText",
                         "Button2",
                         "Button3",
                         "Button1",
                         "Button4",
                         "Text3",
+                        "Button4Copy1",
+                        "requestText",
                         "Text1",
                         "mail",
                         "Text2",
